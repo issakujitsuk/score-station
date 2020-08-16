@@ -1,0 +1,213 @@
+$baseColor: #f0f0f0;
+$lighterColor: #3894be;
+$lightColor: #3b7491;
+$darkColor: #335566;
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    background-color: $baseColor;
+    color: $darkColor;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+
+a:not(.button) {
+    color: $lightColor;
+    &:hover {
+        color: $darkColor;
+    }
+}
+
+ol.questions {
+    margin: 0 0 10px;
+    list-style-type: decimal;
+    padding-left: 2em;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+header {
+    background-color: $lighterColor;
+    color: $baseColor;
+    padding: 2px 5px;
+    text-align: right;
+    .title {
+        font-family: "Unica One", cursive;
+    }
+}
+
+main {
+    padding: 5px;
+    h1 {
+        padding: 5px 0;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 0 0;
+    .title {
+        font-family: "Unica One", cursive;
+    }
+}
+
+form,
+.summary {
+    .item {
+        padding: 5px 0;
+    }
+}
+
+label > span {
+    display: block;
+    background-color: $lightColor;
+    color: $baseColor;
+    padding: 2px 10px;
+    border-radius: 5px 5px 0 0;
+    width: max-content;
+}
+
+@mixin textbox {
+    border: 1px solid $lightColor;
+    border-radius: 0 2px 2px;
+}
+input {
+    @include textbox;
+    &[type="range"] {
+        border: none;
+    }
+    &.one-column {
+        width: 100%;
+    }
+}
+
+textarea {
+    @include textbox;
+    width: 100%;
+    resize: vertical;
+}
+
+button[type="submit"],
+.button {
+    background-color: $darkColor;
+    color: $baseColor;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    $buttonHeight: 42px;
+    border-radius: $buttonHeight / 2;
+    min-height: $buttonHeight;
+    cursor: pointer;
+}
+a.button {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul.options {
+    display: flex;
+    flex-flow: row wrap;
+    $marginWidth: 5px;
+    $marginHeight: 10px;
+    margin: $marginWidth / -2 $marginHeight / -2;
+    li {
+        padding: $marginWidth $marginHeight;
+    }
+}
+
+.required:after {
+    content: "*";
+    color: cyan;
+}
+
+.errors {
+    color: #c4401a;
+    font-weight: bold;
+    font-size: 0.8em;
+    &.error-submit {
+        text-align: center;
+    }
+}
+
+.description {
+    font-size: 0.8em;
+}
+
+.submit-controller {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.expiry {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.poll-create,
+.vote-create {
+    padding-bottom: 10px;
+}
+
+@mixin box-with-caption {
+    > h2 {
+        border-radius: 5px 5px 0 0;
+        background-color: $lightColor;
+        color: $baseColor;
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+    > section {
+        padding: 5px 10px 10px;
+        border: 1px solid $lightColor;
+        border-top: none;
+    }
+}
+.preview {
+    @include box-with-caption;
+}
+
+.qrcode {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Unica One", cursive;
+    color: $lighterColor;
+}
+
+.vote-aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    $marginWidth: 5px;
+    $marginHeight: 10px;
+    margin: $marginWidth / -2 $marginHeight / -2;
+    > section {
+        @include box-with-caption;
+        flex-grow: 1;
+        padding: $marginWidth $marginHeight;
+    }
+}
+
+.summary {
+    @include box-with-caption;
+    margin-top: 20px;
+}
+
+.expired-aside,
+.back-to-vote {
+    text-align: right;
+    padding: 10px;
+    margin-top: 10px;
+}

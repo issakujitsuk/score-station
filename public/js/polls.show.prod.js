@@ -1,0 +1,1 @@
+"use strict";window.addEventListener("load",function(){var e=$(".qrcode");e.qrcode({ecLevel:"H",minVersion:6,text:e.data("url"),quiet:4,mode:1,label:e.data("label"),fontname:e.css("font-family"),fontcolor:e.css("color")})}),$(function(){$(document).on("click",".share",function(){$(this).select()})});

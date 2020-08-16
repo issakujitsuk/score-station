@@ -1,0 +1,1 @@
+"use strict";$(document).on("change",".answers",function(t){var n=this,a=$(this),c=a.data("target"),e=a.val();$("."+c).each(function(t,a){n!==a&&$(a).val(e)})});

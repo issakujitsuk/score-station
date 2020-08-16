@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+html,
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  background-color: #f0f0f0;
+  color: #335566;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  text-align: left;
+  font-size: 15px;
+}
+
+a:not(.button) {
+  color: #3b7491;
+}
+
+a:not(.button):hover {
+  color: #335566;
+}
+
+ol.questions {
+  margin: 0 0 10px;
+  list-style-type: decimal;
+  padding-left: 2em;
+}
+
+header {
+  background-color: #3894be;
+  color: #f0f0f0;
+  padding: 2px 5px;
+  text-align: right;
+}
+
+header .title {
+  font-family: "Unica One", cursive;
+}
+
+main {
+  padding: 5px;
+}
+
+main h1 {
+  padding: 5px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 10px 0 0;
+}
+
+footer .title {
+  font-family: "Unica One", cursive;
+}
+
+form .item,
+.summary .item {
+  padding: 5px 0;
+}
+
+label > span {
+  display: block;
+  background-color: #3b7491;
+  color: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 5px 5px 0 0;
+  width: max-content;
+}
+
+input {
+  border: 1px solid #3b7491;
+  border-radius: 0 2px 2px;
+}
+
+input[type="range"] {
+  border: none;
+}
+
+input.one-column {
+  width: 100%;
+}
+
+textarea {
+  border: 1px solid #3b7491;
+  border-radius: 0 2px 2px;
+  width: 100%;
+  resize: vertical;
+}
+
+button[type="submit"],
+.button {
+  background-color: #335566;
+  color: #f0f0f0;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 21px;
+  min-height: 42px;
+  cursor: pointer;
+}
+
+a.button {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul.options {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -2.5px -5px;
+}
+
+ul.options li {
+  padding: 5px 10px;
+}
+
+.required:after {
+  content: "*";
+  color: cyan;
+}
+
+.errors {
+  color: #c4401a;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.errors.error-submit {
+  text-align: center;
+}
+
+.description {
+  font-size: 0.8em;
+}
+
+.submit-controller {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.expiry {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.poll-create,
+.vote-create {
+  padding-bottom: 10px;
+}
+
+.preview > h2 {
+  border-radius: 5px 5px 0 0;
+  background-color: #3b7491;
+  color: #f0f0f0;
+  font-size: 1em;
+  padding: 5px 10px;
+}
+
+.preview > section {
+  padding: 5px 10px 10px;
+  border: 1px solid #3b7491;
+  border-top: none;
+}
+
+.qrcode {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Unica One", cursive;
+  color: #3894be;
+}
+
+.vote-aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: -2.5px -5px;
+}
+
+.vote-aside > section {
+  flex-grow: 1;
+  padding: 5px 10px;
+}
+
+.vote-aside > section > h2 {
+  border-radius: 5px 5px 0 0;
+  background-color: #3b7491;
+  color: #f0f0f0;
+  font-size: 1em;
+  padding: 5px 10px;
+}
+
+.vote-aside > section > section {
+  padding: 5px 10px 10px;
+  border: 1px solid #3b7491;
+  border-top: none;
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.summary > h2 {
+  border-radius: 5px 5px 0 0;
+  background-color: #3b7491;
+  color: #f0f0f0;
+  font-size: 1em;
+  padding: 5px 10px;
+}
+
+.summary > section {
+  padding: 5px 10px 10px;
+  border: 1px solid #3b7491;
+  border-top: none;
+}
+
+.expired-aside,
+.back-to-vote {
+  text-align: right;
+  padding: 10px;
+  margin-top: 10px;
+}
