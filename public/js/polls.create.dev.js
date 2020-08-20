@@ -4,7 +4,7 @@ $(function () {
   $("#form").on("input", ".for-subject", function () {
     $(".poll-subject").loadTemplate("#template-poll-subject", {
       title: $("input[name='title']").val(),
-      expiry: $("input[name='expiry']").val()
+      expiry: formatDateTime($("input[name='expiry']").val())
     });
   }).on("input", ".for-body", function () {
     // 入力データまとめ
@@ -124,4 +124,16 @@ $(function () {
     });
   });
   $("#form .for-preview").trigger("input");
+  /**
+   * @param {string} str
+   * @returns {string} yyyy/mm/dd HH:MM
+   */
+
+  function formatDateTime(str) {
+    var date = new Date(str);
+    return isNaN(date.getTime()) ? "" : Intl.DateTimeFormat("japanese", {
+      dateStyle: "medium",
+      timeStyle: "short"
+    }).format(date);
+  }
 });

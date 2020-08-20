@@ -37,7 +37,9 @@ class PollController extends Controller {
         $point_min = $request->point_min;
         $point_max = $request->point_max;
         if ($point_min == $point_max) {
-            throw new Exception("point_min must be less than point_max.");
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                "point_min" => "The point min field must be less than point_max.",
+            ]);
         } else if ($point_max < $point_min) {
             list($point_min, $point_max) = [$point_max, $point_min];
         }
@@ -119,7 +121,9 @@ class PollController extends Controller {
 
         // check password
         if (!$poll->checkPassword($request->password)) {
-            throw new \Exception("The password is wrong.");
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                "password" => ["The password is wrong."],
+            ]);
         }
 
         // update poll->expiry

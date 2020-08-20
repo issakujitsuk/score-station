@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
 html,
 body {
   display: flex;
@@ -37,8 +37,8 @@ header {
   text-align: right;
 }
 
-header .title {
-  font-family: "Unica One", cursive;
+header > .title {
+  font-family: "Oxanium", cursive;
 }
 
 main {
@@ -55,8 +55,8 @@ footer {
   padding: 10px 0 0;
 }
 
-footer .title {
-  font-family: "Unica One", cursive;
+footer > .title {
+  font-family: "Oxanium", cursive;
 }
 
 form .item,
@@ -174,7 +174,7 @@ ul.options li {
   padding: 10px;
   margin: 0 auto;
   text-align: center;
-  font-family: "Unica One", cursive;
+  font-family: "Oxanium", cursive;
   color: #3894be;
 }
 

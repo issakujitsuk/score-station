@@ -67,6 +67,13 @@
                         <span>パスワード</span>
                         <input type="password" name="password" class="one-column" required>
                     </label>
+
+                    @error('password')
+                    <p class="errors">
+                        {{ $message }}
+                    </p>
+                    @enderror
+
                 </p>
                 <p class="submit-controller">
                     <button type="submit">投票を締め切る</button>

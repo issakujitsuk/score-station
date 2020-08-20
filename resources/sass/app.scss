@@ -2,6 +2,8 @@ $baseColor: #f0f0f0;
 $lighterColor: #3894be;
 $lightColor: #3b7491;
 $darkColor: #335566;
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+$SymbolFont: "Oxanium", cursive;
 
 html,
 body {
@@ -33,15 +35,13 @@ ol.questions {
     padding-left: 2em;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
-
 header {
     background-color: $lighterColor;
     color: $baseColor;
     padding: 2px 5px;
     text-align: right;
-    .title {
-        font-family: "Unica One", cursive;
+    > .title {
+        font-family: $SymbolFont;
     }
 }
 
@@ -56,8 +56,8 @@ footer {
     text-align: center;
     margin-top: auto;
     padding: 10px 0 0;
-    .title {
-        font-family: "Unica One", cursive;
+    > .title {
+        font-family: $SymbolFont;
     }
 }
 
@@ -182,7 +182,7 @@ ul.options {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
-    font-family: "Unica One", cursive;
+    font-family: $SymbolFont;
     color: $lighterColor;
 }
 
